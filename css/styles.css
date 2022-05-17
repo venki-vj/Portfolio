@@ -1,20 +1,150 @@
 body{
     padding:0;
     margin: 0;
-    display: none;
+ 
     overflow-x: hidden;
+    word-wrap:normal;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+    
 }
 html {
     scroll-behavior: smooth;
 }
+.master-image {
+    display: flex;
+    
+    justify-content: center;
+}
+.admin-image{
+    width: 280px;
+    border-radius:50%;
+}
 .card{
-    width: 95vw;
-    height: 100vh;
-    margin :10px auto 10px;
-    border-radius:5px;
+    margin: 10px auto;
+    width: 90vw;
+    height: auto;
+    padding: 10px;
+    border-radius:10px;
     box-shadow: 0px 0px 3px;
 }
-@media screen and (max-width:425px) {
+.about-heading,.work-header{
+    
+    display:flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgb(175, 175, 175);
+}
+.skill-icon{
+    width: 50px;
+}
+.display-images{
+    padding: 10px;
+    border-radius:30%;
+    width: 20px;
+    background-color:rgb(30, 127, 255);
+}
+.sub-title{
+    font-weight:bold;
+    text-decoration: underline;
+}
+.description{
+    line-height :24px;
+   
+    text-align: justify;
+}
+.work-subheading p{
+    align-items: center;
+    font-size:14px;
+}
+p.job-description ul{
+    list-style:armenian;
+    padding-left: -20px !important;
+}
+.job-description{
+    
+    text-align: justify;
+}
+.wf{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height:20px;
+    
+}
+.ticks{
+    width: 10px;
+    height: 10px;
+}
+.work-subheading p.company{
+    margin-top:-15px;
+    font-size:14px;
+}
+.contact-icons{
+    margin-top: 10px;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    gap: 20px;
+}
+#contact{
+    margin-bottom: 80px;
+}
+#skills-list{
+    display:grid;
+    align-items:center;
+    justify-content:center;
+    column-gap: 20px;
+    row-gap:20px;
+    grid-template-columns: 80px 80px  80px;
+}
+.skill-1,.skill-2,.skill-3,.skill-4,.skill-5,.skill-6{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+}
+.img{
+    width: 25px;
+}
+#projects .projects-list .project-technologies{
+    display:flex;
+    gap: 10px;
+    flex-wrap:wrap ;
+    margin-top:30px;
+  }
+  #projects .projects-list .project-technologies  h6{
+ 
+    display:flex;
+    margin-top: -20px;
+    justify-content: center;
+    background-color:green;
+    color: white;
+    width: auto;
+    padding:5px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+  }
+  .collage{
+    display:flex;
+  }
+  .collage h4{
+    margin-top:20px;
+    margin-bottom:-10px;
+    font-size:15px;
+  }
+  .collage p{
+    font-weight: bold;
+    font-size:14px;
+  }
+  .collage img{
+    margin-top:15px;
+    width:50px;
+    height:50px;
+  }
+@media screen and (max-width:768px) {
+
+   
     div.icons{
         z-index: 10;
         position: fixed;
@@ -22,7 +152,7 @@ html {
     }
     .icons{
         bottom: 1;
-       background-color: rgba(249, 249, 249, 0.869);
+       background-color: white;
        display:flex;
        box-shadow:0px -2px 10px ;
        justify-content: space-around;
@@ -31,7 +161,7 @@ html {
         width: 100vw;
        
     }
-    .top-icon{
+    .center-icon{
         
         background-color: rgb(234, 234, 234);
         box-shadow: 0px 0px 3px;
@@ -42,13 +172,14 @@ html {
         margin-top:-50px;
   
     }
-    .top-icon img{
+    .center-icon img{
         margin: 4px 0px 4px 4px;
         display: flex;
         justify-content:center;
         align-items: center;
     }
      img#center:hover{
+
         box-shadow: none;
         border-radius: none;
         background-color:none;
@@ -57,9 +188,10 @@ html {
         padding:10px;
     }
     .icons img:hover {
-            background-color: rgb(234, 234, 234);
+            outline: none;
+            /* background-color: rgb(234, 234, 234);
             border-radius: 10px;
-            box-shadow: 0px 0px 3px;
+            box-shadow: 0px 0px 3px; */
     }
    
     
@@ -68,5 +200,138 @@ html {
         display:block;
         position: relative;
         
+    }
+    nav{
+        display:none;
+    }
+}
+@media screen and (min-width:1024px) {
+    
+    .icons{
+        display: none;
+    }
+    nav {
+    
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        width: 20%;
+          height:105vh;
+        float: left;
+        position: fixed;
+      
+        border-right: 1px solid rgba(212, 212, 212, 0.926);
+      }
+      div.profile-picture{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+      }
+      div.profile-picture img {
+        
+        width: 160px;
+        border-radius: 90%;
+      }
+      .title {
+      
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: bolder;
+      }
+      div#nav-links{
+          margin-top:-100px;
+          width: 215px;
+      }
+     div.nav-links ul {
+            display:flex;
+            margin-left: -66px;
+            flex-direction: column;
+      }
+     div.nav-links ul li {
+         
+        list-style-type: none;
+        margin: 0;
+      }
+      
+      div.nav-links ul li a.a-tags {
+        width: 260px;
+        color: black;
+        margin: 0;
+        height: 50px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        border-left: 5px solid none;
+        justify-content: center;
+      }
+      nav div.nav-links ul li.active{
+        width: 260px;
+        font-weight: bold;
+        border-left: 8px solid navy;
+        background-color: rgb(204, 241, 255);
+        cursor: pointer;
+        transition: 0.3s ease background-color;
+      }
+      div.nav-links a:hover {
+        
+        font-weight: bold;
+        border-left: 8px solid navy;
+        background-color: rgb(204, 241, 255);
+        cursor: pointer;
+      }
+      div.bulbs {
+          padding-bottom: 10px;
+        margin-top: -120px;
+      }
+      div.bulbs img {
+          margin-left: -40px;
+          margin-bottom: -60px;
+          background-color: rgb(96, 109, 255);
+        color: white;
+        border-radius: 50%;
+      }
+      div.bulbs img:hover {
+        cursor: pointer;
+      }
+      div.side-screen {
+        margin-top: -10px; 
+      padding: 10px;
+      margin-left: 270px ;
+      display: flex;
+      flex-direction: column;
+    }
+    #skills-list{
+        display: flex;
+        justify-content:flex-start;
+    }
+    #contact{
+        display:none;
+    }
+    .master-image{
+        display:none;
+    }
+    .contact-icons {
+        display: flex;
+        gap: 15px;
+        height:40px;
+        justify-content: flex-start;
+    }
+    
+    .contacts{
+        
+        border-radius: 50%;
+        background-color:gray;
+    }
+    .card{
+        width: 75vw;
+    }
+    hr{
+      margin: 10px 60px;
+      color: gray;
+    }
+    
+    .contacts:hover{
+        background-color:skyblue;
     }
 }
