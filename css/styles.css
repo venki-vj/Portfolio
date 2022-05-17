@@ -144,7 +144,9 @@ p.job-description ul{
   }
 @media screen and (max-width:768px) {
 
-   
+   .small-screen{
+       display:none;
+   }
     div.icons{
         z-index: 10;
         position: fixed;
