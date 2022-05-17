@@ -1,5 +1,5 @@
-const bulbWhite='../images/bulb.svg';
-const bulbBlack='../images/bulbBlack.svg';
+const bulbWhite='./images/bulb.svg';
+const bulbBlack='./images/bulbBlack.svg';
 
 const body=document.body
 const btn=document.getElementById('bulbs');
